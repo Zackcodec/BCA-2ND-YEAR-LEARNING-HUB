@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCA 2nd Year | Learning Hub</title>
+    <title>BCA Department | Learning Hub</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,28 +12,125 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
     <script src="script.js" defer></script>
 
     
 </head>
 <body>
 
+    <main class="auth-screen" id="auth-screen" aria-live="polite">
+        <section class="auth-card" aria-labelledby="auth-brand-title">
+            <a class="auth-brand" href="./index.html" aria-label="BCA Learning Hub">
+                <span class="auth-brand-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                <span><strong id="auth-brand-title">BCA Learning Hub</strong><small>Learn, track, and grow together</small></span>
+            </a>
+
+            <p class="auth-feedback" id="auth-feedback" role="alert" hidden></p>
+            <p class="auth-notice" id="auth-notice" role="status" hidden></p>
+
+            <form class="auth-form" id="login-form">
+                <p class="dashboard-eyebrow">Student access</p>
+                <h1>Welcome back</h1>
+                <p class="auth-description">Sign in to continue your courses and pick up where you left off.</p>
+                <label for="login-email">Email address</label>
+                <input id="login-email" name="email" type="email" autocomplete="email" required>
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                <button class="auth-primary-btn" type="submit">Log in</button>
+                <button class="auth-google-btn" type="button" data-auth-action="google">
+                    <i class="fa-brands fa-google" aria-hidden="true"></i> Continue with Google
+                </button>
+                <div class="auth-form-links">
+                    <button type="button" class="auth-text-btn" data-auth-view="forgot">Forgot password?</button>
+                    <span>New here? <button type="button" class="auth-text-btn" data-auth-view="signup">Create an account</button></span>
+                </div>
+            </form>
+
+            <form class="auth-form" id="signup-form" hidden>
+                <p class="dashboard-eyebrow">Join the learning hub</p>
+                <h1>Create your account</h1>
+                <p class="auth-description">Your course progress will be saved to your account.</p>
+                <label for="signup-name">Full name</label>
+                <input id="signup-name" name="fullName" type="text" autocomplete="name" maxlength="100" required>
+                <label for="signup-email">Email address</label>
+                <input id="signup-email" name="email" type="email" autocomplete="email" required>
+                <label for="signup-password">Password</label>
+                <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                <label for="signup-confirm-password">Confirm password</label>
+                <input id="signup-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required>
+                <button class="auth-primary-btn" type="submit">Create account</button>
+                <button class="auth-google-btn" type="button" data-auth-action="google">
+                    <i class="fa-brands fa-google" aria-hidden="true"></i> Continue with Google
+                </button>
+                <p class="auth-switch-link">Already registered? <button type="button" class="auth-text-btn" data-auth-view="login">Log in</button></p>
+            </form>
+
+            <form class="auth-form" id="forgot-form" hidden>
+                <p class="dashboard-eyebrow">Account recovery</p>
+                <h1>Reset your password</h1>
+                <p class="auth-description">Enter the email address on your account and we’ll send a reset link.</p>
+                <label for="forgot-email">Email address</label>
+                <input id="forgot-email" name="email" type="email" autocomplete="email" required>
+                <button class="auth-primary-btn" type="submit">Send reset email</button>
+                <p class="auth-switch-link"><button type="button" class="auth-text-btn" data-auth-view="login">Back to login</button></p>
+            </form>
+
+            <form class="auth-form" id="reset-form" hidden>
+                <p class="dashboard-eyebrow">Account recovery</p>
+                <h1>Choose a new password</h1>
+                <p class="auth-description">Use at least 8 characters for your new password.</p>
+                <label for="reset-password">New password</label>
+                <input id="reset-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                <label for="reset-confirm-password">Confirm new password</label>
+                <input id="reset-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required>
+                <button class="auth-primary-btn" type="submit">Update password</button>
+            </form>
+
+            <p class="auth-config-message" id="auth-config-message" hidden></p>
+        </section>
+    </main>
+
+    <div id="authenticated-app" hidden>
     <!-- SIDEBAR -->
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <i class="fa-solid fa-graduation-cap"></i> BCA 2nd Year
+            <i class="fa-solid fa-graduation-cap"></i> BCA Department
         </div>
         <div class="nav-links">
             <button class="nav-btn active" type="button" data-action="dashboard"><i class="fa-solid fa-house"></i> Dashboard</button>
-            <h4 class="sidebar-section-label">Semesters</h4>
-            <button class="nav-btn" type="button" data-semester="sem3"><i class="fa-regular fa-folder"></i> Semester III</button>
-            <button class="nav-btn" type="button" data-semester="sem4"><i class="fa-regular fa-folder-open"></i> Semester IV</button>
-            <button class="nav-btn" type="button" data-action="about"><i class="fa-regular fa-user"></i> About Himanshu</button>
+            <h4 class="sidebar-section-label">BCA Program</h4>
+            <button class="nav-btn year-nav-btn" type="button" data-year="year1" aria-expanded="false" aria-controls="year1-semesters">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>BCA 1st Year</span><i class="fa-solid fa-chevron-down year-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="semester-nav-group" id="year1-semesters" hidden>
+                <button class="nav-btn semester-nav-btn" type="button" data-semester="sem1">Semester I</button>
+                <button class="nav-btn semester-nav-btn" type="button" data-semester="sem2">Semester II</button>
+            </div>
+            <button class="nav-btn year-nav-btn" type="button" data-year="year2" aria-expanded="false" aria-controls="year2-semesters">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>BCA 2nd Year</span><i class="fa-solid fa-chevron-down year-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="semester-nav-group" id="year2-semesters" hidden>
+                <button class="nav-btn semester-nav-btn" type="button" data-semester="sem3">Semester III</button>
+                <button class="nav-btn semester-nav-btn" type="button" data-semester="sem4">Semester IV</button>
+            </div>
+            <button class="nav-btn year-nav-btn" type="button" data-year="year3" aria-expanded="false" aria-controls="year3-semesters">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>BCA 3rd Year</span><i class="fa-solid fa-chevron-down year-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="semester-nav-group" id="year3-semesters" hidden>
+                <button class="nav-btn semester-nav-btn" type="button" data-semester="sem5">Semester V</button>
+                <button class="nav-btn semester-nav-btn" type="button" data-semester="sem6">Semester VI</button>
+            </div>
+            <button class="nav-btn" type="button" data-action="profile">
+                <i class="fa-regular fa-id-card" aria-hidden="true"></i> My Profile
+            </button>
+            <button class="nav-btn" type="button" data-action="about"><i class="fa-regular fa-user"></i> About Admin</button>
         </div>
         <div class="sidebar-footer">
             Designed & Curated by<br>
             <strong>Himanshu Pratap Singh</strong><br>
-            <span class="sidebar-footer-subtitle">BCA 2nd Year Student</span>
+            <span class="sidebar-footer-subtitle">BCA Student</span>
         </div>
     </nav>
 
@@ -44,9 +141,17 @@
             <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false" data-action="toggle-sidebar"><i class="fa-solid fa-bars"></i></button>
             <div class="topbar-spacer" aria-hidden="true"></div>
             <div class="topbar-right">
+                <button class="account-summary" id="open-profile" type="button" aria-label="Open your student profile">
+                    <span class="account-avatar" aria-hidden="true"><i class="fa-regular fa-user"></i></span>
+                    <span class="account-identity"><strong id="account-name">Student</strong><small id="account-email"></small></span>
+                </button>
+                <button class="contribute-link" id="open-support" type="button" aria-label="See ways to support the learning hub">
+                    <i class="fa-solid fa-mug-hot" aria-hidden="true"></i><span>Support this project</span>
+                </button>
                 <a href="https://chat.whatsapp.com/Kqt79EZb62B4BjBB2NvySq" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
                     <i class="fa-brands fa-whatsapp community-icon" aria-hidden="true"></i> <span>Join Community</span>
                 </a>
+                <button class="logout-btn" id="logout-button" type="button"><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i><span>Log out</span></button>
             </div>
         </header>
 
@@ -57,15 +162,247 @@
             <p class="app-error" id="app-error" role="alert" hidden></p>
 
             <div class="container" id="dashboard-view">
-                <div class="page-header">
-                    <h1 id="dashboard-title">All Subjects</h1>
-                    <p class="dashboard-description">Click on any subject to access roadmaps, track progress, and watch embedded video lectures.</p>
-                </div>
-                
-                <div class="subject-grid" id="subject-grid">
-                    <!-- Injected by JavaScript -->
-                </div>
+                <section id="dashboard-home" aria-labelledby="dashboard-greeting">
+                    <div class="dashboard-welcome">
+                        <div>
+                            <p class="dashboard-eyebrow">Your learning space</p>
+                            <h1 id="dashboard-greeting">Welcome back, <span id="student-name">Student</span></h1>
+                            <p class="dashboard-description">Keep your BCA learning on track, one module at a time.</p>
+                        </div>
+                        <button class="edit-name-btn" id="edit-student-name" type="button">
+                            <i class="fa-solid fa-pen" aria-hidden="true"></i> Edit profile
+                        </button>
+                    </div>
+                    <p class="local-profile-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your progress is private to your account and syncs across devices</p>
+
+                    <section class="dashboard-section" aria-labelledby="performance-title">
+                        <div class="dashboard-section-heading">
+                            <div>
+                                <p class="dashboard-eyebrow">Your progress</p>
+                                <h2 id="performance-title">Learning performance</h2>
+                            </div>
+                        </div>
+                        <div class="performance-grid">
+                            <article class="performance-card performance-primary">
+                                <div class="performance-card-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                                <p>Overall syllabus progress</p>
+                                <strong id="overall-progress">0%</strong>
+                                <div class="progress-track" role="progressbar" aria-label="Overall syllabus progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="overall-progress-bar">
+                                    <span></span>
+                                </div>
+                                <small>Calculated from course outlines available so far</small>
+                            </article>
+                            <article class="performance-card">
+                                <div class="performance-card-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></div>
+                                <p>Modules completed</p>
+                                <strong id="modules-completed"><span id="completed-modules-count">0</span> <span>of <span id="total-modules-count">0</span></span></strong>
+                                <small>Across courses with an outline</small>
+                            </article>
+                            <article class="performance-card">
+                                <div class="performance-card-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+                                <p>Courses completed</p>
+                                <strong id="courses-completed">0</strong>
+                                <small id="courses-completed-caption">Finish every module in a course</small>
+                            </article>
+                            <article class="performance-card streak-card">
+                                <div class="performance-card-icon"><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i></div>
+                                <p>Learning streak</p>
+                                <strong><span id="current-streak">0</span> <span id="current-streak-unit">days</span></strong>
+                                <small id="streak-caption">Complete a module to start a streak</small>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="dashboard-section" aria-labelledby="year-access-title">
+                        <div class="dashboard-section-heading">
+                            <div>
+                                <p class="dashboard-eyebrow">Quick access</p>
+                                <h2 id="year-access-title">Choose your BCA year</h2>
+                            </div>
+                            <button class="text-action" type="button" id="browse-all-courses">
+                                Browse all courses <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="year-access-grid">
+                            <button class="year-access-card" type="button" data-year="year1">
+                                <span class="year-access-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+                                <span class="year-access-title">BCA 1st Year</span>
+                                <span class="year-access-meta" id="year1-course-count">Semesters I &amp; II</span>
+                                <span class="year-access-progress"><span id="year1-progress-label">0% complete</span><span class="mini-progress-track"><span id="year1-progress-bar"></span></span></span>
+                                <i class="fa-solid fa-arrow-right year-access-arrow" aria-hidden="true"></i>
+                            </button>
+                            <button class="year-access-card" type="button" data-year="year2">
+                                <span class="year-access-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span>
+                                <span class="year-access-title">BCA 2nd Year</span>
+                                <span class="year-access-meta" id="year2-course-count">Semesters III &amp; IV</span>
+                                <span class="year-access-progress"><span id="year2-progress-label">0% complete</span><span class="mini-progress-track"><span id="year2-progress-bar"></span></span></span>
+                                <i class="fa-solid fa-arrow-right year-access-arrow" aria-hidden="true"></i>
+                            </button>
+                            <button class="year-access-card" type="button" data-year="year3">
+                                <span class="year-access-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>
+                                <span class="year-access-title">BCA 3rd Year</span>
+                                <span class="year-access-meta" id="year3-course-count">Semesters V &amp; VI</span>
+                                <span class="year-access-progress"><span id="year3-progress-label">0% complete</span><span class="mini-progress-track"><span id="year3-progress-bar"></span></span></span>
+                                <i class="fa-solid fa-arrow-right year-access-arrow" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <section class="dashboard-section" aria-labelledby="certificate-section-title">
+                        <div class="dashboard-section-heading">
+                            <div>
+                                <p class="dashboard-eyebrow">Your achievements</p>
+                                <h2 id="certificate-section-title">Course certificates</h2>
+                            </div>
+                        </div>
+                        <div class="certificate-grid" id="certificate-grid"></div>
+                    </section>
+
+                    <p class="dashboard-footer-note">Your profile and learning progress are connected to your student account.</p>
+
+                    <section class="legal-policies" id="legal-policies" aria-labelledby="legal-policies-title">
+                        <div class="legal-policies-heading">
+                            <div>
+                                <p class="dashboard-eyebrow">Clear and transparent</p>
+                                <h2 id="legal-policies-title">Policies</h2>
+                            </div>
+                            <small>Last updated: October 4, 2026</small>
+                        </div>
+                        <details class="legal-policy">
+                            <summary>Privacy policy</summary>
+                            <div class="legal-policy-copy">
+                                <p><strong>Information:</strong> If you create an account, the service uses your email address and the profile details you choose to provide (such as your display name, bio, and social links). It also stores your course progress and learning-activity dates to provide the dashboard, streaks, and personal completion certificates.</p>
+                                <p><strong>Storage and sharing:</strong> Account information is handled by Supabase for sign-in and cloud storage. Database access is restricted to the signed-in account by the configured access policies. The app does not intentionally publish student profiles. Your chosen social links open third-party sites, where their own privacy terms apply.</p>
+                                <p><strong>Browser and third parties:</strong> The app may store sign-in session data and simple preferences in your browser. Google sign-in, YouTube embeds, fonts/icons, the QR display library, GitHub Pages hosting, and any payment/contribution provider may receive technical data under their own policies. The UPI QR is encoded in your browser; your UPI ID is not sent to the QR library provider. The app does not sell student profile or progress data.</p>
+                                <p><strong>Choices and requests:</strong> You can edit profile details or log out from the app. Account deletion is not currently self-service; for a privacy or deletion request, contact the maintainer through the <a href="https://github.com/zackcodec/BCA-2ND-YEAR-LEARNING-HUB" target="_blank" rel="noopener noreferrer">project's GitHub page</a>. Do not post passwords or private account details publicly. Provider backups or records may remain for a limited period or where law requires.</p>
+                            </div>
+                        </details>
+                        <details class="legal-policy">
+                            <summary>Terms and conditions</summary>
+                            <div class="legal-policy-copy">
+                                <p>This is a student-built learning resource, not an official university service. Course names, roadmaps, notes, links, and personal certificates may be incomplete, change, or differ from your university syllabus. Check authoritative course materials; no grades, exam results, or learning outcomes are guaranteed. Personal certificates are not accredited qualifications.</p>
+                                <p>Use the service lawfully and keep your sign-in details secure. Do not misuse accounts, disrupt the service, or submit content or links you are not entitled to share. Third-party websites and embedded videos are provided for convenience and are governed by their providers; their content, availability, and practices are outside this project's control.</p>
+                                <p>The maintainer may update, suspend, or remove parts of this free service. To the extent permitted by applicable law, the service is provided without guarantees and the maintainer is not responsible for indirect loss arising from use of third-party resources or service interruptions. Nothing in these terms excludes liability or rights that cannot legally be excluded.</p>
+                            </div>
+                        </details>
+                        <details class="legal-policy">
+                            <summary>Refund policy</summary>
+                            <div class="legal-policy-copy">
+                                <p>The learning hub currently sells no courses, subscriptions, or other paid products and does not process payments itself. Any optional contribution is sent directly through Buy Me a Coffee or your UPI app to the displayed UPI ID; the site does not receive or store payment details. For payment, cancellation, or refund requests, contact the provider or UPI app/bank involved and check its terms before paying.</p>
+                                <p>This policy does not limit any refund or consumer rights that apply under your local law. If paid services are introduced, their price and refund terms will be shown before purchase.</p>
+                            </div>
+                        </details>
+                        <p class="legal-disclaimer">These summaries are general information, not legal advice or a guarantee against claims. Applicable law may give you rights that these policies cannot remove.</p>
+                    </section>
+                </section>
+
+                <section id="course-browser" hidden>
+                    <button class="back-link" type="button" data-action="dashboard">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Dashboard
+                    </button>
+                    <div class="page-header">
+                        <h1 id="dashboard-title">BCA Courses</h1>
+                        <p class="dashboard-description">Browse subjects by year and semester. Prototype subjects are marked for review against your university syllabus.</p>
+                    </div>
+                    <div class="subject-grid" id="subject-grid">
+                        <!-- Injected by JavaScript -->
+                    </div>
+                </section>
             </div>
+
+            <section class="container support-view" id="support-view" aria-labelledby="support-title" hidden>
+                <button class="back-link" type="button" data-action="dashboard">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Dashboard
+                </button>
+                <div class="support-heading">
+                    <p class="dashboard-eyebrow">A little support goes a long way</p>
+                    <h1 id="support-title">Support BCA Learning Hub</h1>
+                    <p>Help us keep the learning resources free for BCA students.</p>
+                </div>
+                <div class="support-options">
+                    <article class="support-option-card">
+                        <span class="support-option-icon coffee-icon" aria-hidden="true"><i class="fa-solid fa-mug-hot"></i></span>
+                        <h2>Buy Me a Coffee</h2>
+                        <p>Scan the QR code or visit our Buy Me a Coffee page.</p>
+                        <div class="upi-qr-frame support-qr-frame">
+                            <img class="support-qr-image" src="2.png.png" alt="Buy Me a Coffee support QR code" loading="lazy">
+                        </div>
+                        <a class="support-action-btn" href="https://www.buymeacoffee.com/himaanshusingh" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Support via Buy Me a Coffee
+                        </a>
+                    </article>
+                    <div class="support-divider" aria-hidden="true"><span>OR</span></div>
+                    <article class="support-option-card upi-option-card">
+                        <span class="support-option-icon upi-icon" aria-hidden="true"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                        <h2>Pay directly via UPI</h2>
+                        <p>Scan the QR code or tap below to open an installed UPI app, such as Paytm.</p>
+                        <div class="upi-qr-frame">
+                            <div id="upi-qr-code" role="img" aria-label="UPI payment QR code"></div>
+                        </div>
+                        <p class="upi-id-label">UPI ID</p>
+                        <div class="upi-id-row">
+                            <code id="upi-id-value">aashupratap@ptyes</code>
+                            <button class="copy-upi-btn" id="copy-upi-id" type="button">
+                                <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy UPI ID
+                            </button>
+                        </div>
+                        <a class="support-action-btn upi-pay-btn" id="upi-pay-link" href="upi://pay?pa=aashupratap%40ptyes&amp;tn=Support%20BCA%20Learning%20Hub&amp;cu=INR">
+                            <i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i> Pay via UPI
+                        </a>
+                        <p class="upi-status" id="upi-status" role="status" aria-live="polite"></p>
+                    </article>
+                </div>
+                <p class="support-thanks">Your voluntary contribution helps maintain and improve free BCA learning resources. Contributions are optional and do not unlock special access or affect student progress.</p>
+            </section>
+
+            <section class="container profile-view" id="profile-view" aria-labelledby="profile-title" hidden>
+                <button class="back-link" type="button" data-action="dashboard">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Dashboard
+                </button>
+                <div class="profile-hero">
+                    <div class="profile-avatar" id="profile-avatar" aria-hidden="true">ST</div>
+                    <div>
+                        <p class="dashboard-eyebrow">Your student profile</p>
+                        <h1 id="profile-title">My Profile</h1>
+                        <p class="dashboard-description">Make this space yours with a short introduction and your social links.</p>
+                    </div>
+                </div>
+                <div class="profile-layout">
+                    <form class="profile-form" id="profile-form">
+                        <h2>Personal details</h2>
+                        <label for="profile-full-name">Display name</label>
+                        <input id="profile-full-name" name="full_name" type="text" maxlength="100" required>
+                        <label for="profile-bio">About you</label>
+                        <textarea id="profile-bio" name="bio" rows="4" maxlength="400" placeholder="What are you learning or interested in?"></textarea>
+                        <p class="profile-form-hint">Your profile is private to your account. Social links are only shown to you in this account.</p>
+                        <h2 class="profile-links-heading">Social links</h2>
+                        <label for="profile-website">Website or portfolio</label>
+                        <input id="profile-website" name="website_url" type="url" inputmode="url" placeholder="https://example.com">
+                        <label for="profile-linkedin">LinkedIn</label>
+                        <input id="profile-linkedin" name="linkedin_url" type="url" inputmode="url" placeholder="https://linkedin.com/in/your-name">
+                        <label for="profile-github">GitHub</label>
+                        <input id="profile-github" name="github_url" type="url" inputmode="url" placeholder="https://github.com/your-name">
+                        <label for="profile-instagram">Instagram</label>
+                        <input id="profile-instagram" name="instagram_url" type="url" inputmode="url" placeholder="https://instagram.com/your-name">
+                        <div class="profile-form-actions">
+                            <button class="name-save-btn" type="submit">Save profile</button>
+                            <button class="name-cancel-btn" id="cancel-profile-edit" type="button">Reset changes</button>
+                        </div>
+                    </form>
+                    <aside class="profile-summary-card">
+                        <p class="dashboard-eyebrow">Your journey</p>
+                        <h2 id="profile-summary-name">Student</h2>
+                        <p id="profile-summary-bio" class="profile-summary-bio">Add a short introduction to your profile.</p>
+                        <div class="profile-stat-row"><span>Current streak</span><strong><span id="profile-current-streak">0</span> <span id="profile-current-streak-unit">days</span></strong></div>
+                        <div class="profile-stat-row"><span>Longest streak</span><strong><span id="profile-longest-streak">0</span> <span id="profile-longest-streak-unit">days</span></strong></div>
+                        <div class="profile-stat-row"><span>Certificates</span><strong id="profile-certificate-count">0</strong></div>
+                        <div class="profile-social-links" id="profile-social-links"></div>
+                    </aside>
+                </div>
+                <p class="profile-policy-link">
+                    <button class="text-action" id="profile-policies-link" type="button">Privacy, terms &amp; refund policies</button>
+                </p>
+            </section>
 
             <!-- About the student who created this learning hub -->
             <section class="container about-view" id="about-view" aria-labelledby="about-title">
@@ -76,7 +413,7 @@
                 <div class="about-hero">
                     <p class="about-eyebrow">A student-led project for our college</p>
                     <h1 id="about-title">Hi, I'm Himanshu Thakur.</h1>
-                    <p class="about-intro">I'm a BCA second-year student, and I created this learning hub to make it easier for students in my college to find course roadmaps, track syllabus progress, and access useful learning resources in one place.</p>
+                    <p class="about-intro">I'm a BCA student, and I created this learning hub to make it easier for students in my college to find course roadmaps, track syllabus progress, and access useful learning resources in one place.</p>
                 </div>
 
                 <div class="about-grid">
@@ -86,26 +423,20 @@
                         </div>
                         <p class="about-eyebrow">Why I built it</p>
                         <h2>Made for students, shaped by student needs.</h2>
-                        <p>This is an independent student project to help classmates study at their own pace. It brings semester subjects, module checklists, curated video playlists, notes, and practice links together so it is easier to know what to study next.</p>
+                        <p>This is an independent student project to help BCA students study at their own pace. It brings year-wise and semester-wise subjects, module checklists, curated video playlists, notes, and practice links together so it is easier to know what to study next.</p>
                         <p>The goal is simple: make helpful resources easier to discover and keep learning a little more organized.</p>
                     </article>
 
                     <aside class="about-card instagram-profile-card" aria-labelledby="instagram-profile-title">
                         <div class="about-social-heading">
                             <div>
-                                <p class="about-eyebrow">From my Instagram</p>
+                                <p class="about-eyebrow">A little about me</p>
                                 <h2 id="instagram-profile-title">Follow along</h2>
                             </div>
                             <i class="fa-brands fa-instagram instagram-brand-icon" aria-hidden="true"></i>
                         </div>
-                        <div class="instagram-profile-embed">
-                            <iframe
-                                src="https://www.instagram.com/himanshuthaakur/embed/"
-                                title="Himanshu Thakur's Instagram profile"
-                                loading="lazy"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
+                        <div class="profile-photo-frame">
+                            <img class="profile-photo" src="admin.jpeg" alt="Himanshu Thakur" loading="lazy">
                         </div>
                         <a class="instagram-profile-link" href="https://www.instagram.com/himanshuthaakur?stkn=cnI2d3hxYmw4Z3l2" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-instagram" aria-hidden="true"></i>
@@ -201,6 +532,21 @@
 
         </div>
     </main>
+    </div>
+
+    <section id="certificate-print-view" class="certificate-print-view" aria-label="Course completion certificate" hidden>
+        <div class="certificate-sheet">
+            <div class="certificate-mark"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+            <p class="certificate-eyebrow">BCA Department Learning Hub</p>
+            <h1>Certificate of Completion</h1>
+            <p class="certificate-intro">This certificate is proudly presented to</p>
+            <p class="certificate-student" id="certificate-student-name"></p>
+            <p class="certificate-intro">for completing all available syllabus modules in</p>
+            <h2 id="certificate-course-name"></h2>
+            <p class="certificate-date">Completed on <time id="certificate-date"></time></p>
+            <div class="certificate-footer"><span>Learning Hub · Personal achievement</span><span id="certificate-id"></span></div>
+        </div>
+    </section>
 
     <aside class="instagram-popup" id="instagram-popup" aria-label="Follow Himanshu on Instagram" hidden>
         <button class="instagram-popup-close" id="instagram-popup-close" type="button" aria-label="Dismiss Instagram follow prompt">
