@@ -1,0 +1,336 @@
+﻿{
+    "python":  {
+                   "id":  "python",
+                   "title":  "Python Programming",
+                   "sem":  "sem4",
+                   "semLabel":  "Semester IV",
+                   "icon":  "fa-brands fa-python",
+                   "desc":  "Master Python from scratch: data types, control flow, functions, dictionaries, and file handling. Highly requested in industry.",
+                   "videos":  [
+                                  {
+                                      "title":  "Python for Beginners - #100DaysOfCode",
+                                      "provider":  "CodeWithHarry",
+                                      "playlistUrl":  "https://www.youtube.com/embed/videoseries?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg"
+                                  },
+                                  {
+                                      "title":  "Python Language Full Course (2026)",
+                                      "provider":  "Apna College",
+                                      "playlistUrl":  "https://www.youtube.com/embed/videoseries?list=PLGjplNEQ1it8-0CmoljS5yeV-GlKSUEt0"
+                                  }
+                              ],
+                   "notesName":  "CodeWithHarry Official Notes \u0026 Repos",
+                   "notesLink":  "https://www.codewithharry.com/tutorial/python/",
+                   "mockLink":  "https://www.sanfoundry.com/python-mcqs/",
+                   "modules":  [
+                                   {
+                                       "title":  "Module I: Python Basics \u0026 Strings",
+                                       "desc":  "History, Identifiers, Operators. String creation, slicing, formatting, and built-in functions."
+                                   },
+                                   {
+                                       "title":  "Module II: Control Flow \u0026 Functions",
+                                       "desc":  "If-else, loops, break/continue. Lambda functions, Scope, Command line arguments."
+                                   },
+                                   {
+                                       "title":  "Module III: Data Structures",
+                                       "desc":  "Mutable/Immutable: Lists, Tuples, Dictionaries. Introduction to Numpy arrays."
+                                   },
+                                   {
+                                       "title":  "Module IV: File Handling \u0026 Exceptions",
+                                       "desc":  "Reading/Writing Text, CSV, JSON. Exception hierarchy. Basics of Matplotlib plotting."
+                                   }
+                               ]
+               },
+    "dbms":  {
+                 "id":  "dbms",
+                 "title":  "DBMS Using PL/SQL",
+                 "sem":  "sem4",
+                 "semLabel":  "Semester IV",
+                 "icon":  "fa-solid fa-database",
+                 "desc":  "Understand architecture, ER modelling, Normalization, Relational Algebra and practically apply SQL operations.",
+                 "videos":  [
+                                {
+                                    "title":  "DBMS Complete Playlist",
+                                    "provider":  "Gate Smashers",
+                                    "playlistUrl":  "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y"
+                                },
+                                {
+                                    "title":  "DBMS in Hindi (Complete Playlist)",
+                                    "provider":  "Knowledge Gate - Sanchit Sir",
+                                    "playlistUrl":  "https://www.youtube.com/embed/videoseries?list=PLmXKhU9FNesR1rSES7oLdJaNFgmuj0SYV"
+                                },
+                                {
+                                    "title":  "DBMS Full Course",
+                                    "provider":  "Learn Coding",
+                                    "playlistUrl":  "https://www.youtube.com/embed/videoseries?list=PLqleLpAMfxGDEClbx9ymd-KWDDJrx_W8C"
+                                }
+                            ],
+                 "notesName":  "Apna College / GeeksForGeeks Notes",
+                 "notesLink":  "https://www.geeksforgeeks.org/dbms/",
+                 "mockLink":  "https://www.indiabix.com/database/questions-and-answers/",
+                 "modules":  [
+                                 {
+                                     "title":  "Module I: Intro \u0026 Architecture",
+                                     "desc":  "Concept models, schema, physical and logical data models. Role of DBA."
+                                 },
+                                 {
+                                     "title":  "Module II: ER \u0026 EER Models",
+                                     "desc":  "ER components. Superclass/subclass, Specialization, Aggregation."
+                                 },
+                                 {
+                                     "title":  "Module III: Normalization Process",
+                                     "desc":  "First, Second, Third, BCNF Normal forms. Transforming ER models."
+                                 },
+                                 {
+                                     "title":  "Module IV: SQL Implementation",
+                                     "desc":  "Relational algebra, CREATE, INSERT, SELECT queries, Aggregate functions."
+                                 },
+                                 {
+                                     "title":  "Module V: File Organization",
+                                     "desc":  "Storage, Hashing, B-Trees, Secondary storage basics."
+                                 }
+                             ]
+             },
+    "daa":  {
+                "id":  "daa",
+                "title":  "Design \u0026 Analysis of Algorithms",
+                "sem":  "sem4",
+                "semLabel":  "Semester IV",
+                "icon":  "fa-solid fa-diagram-project",
+                "desc":  "Core CS fundamentals: Time complexities, Divide \u0026 Conquer, Greedy strategies, and Dynamic programming approaches.",
+                "videos": [
+                    {
+                        "title": "Algorithms",
+                        "provider": "Abdul Bari",
+                        "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O"
+                    },
+                    {
+                        "title": "Design and Analysis of Algorithms",
+                        "provider": "Gate Smashers",
+                        "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiHcmS4i14bI0VrMbZTUvlTa"
+                    }
+                ],
+                "notesName":  "CLRS Book Summary / Gate Notes",
+                "notesLink":  "https://www.geeksforgeeks.org/fundamentals-of-algorithms/",
+                "mockLink":  "https://www.geeksforgeeks.org/quiz-corner-algorithms/",
+                "modules":  [
+                                {
+                                    "title":  "Module I: Time Complexity \u0026 Sorting",
+                                    "desc":  "Asymptotic notations. Bubble, Insertion, Selection sorts."
+                                },
+                                {
+                                    "title":  "Module II: Divide \u0026 Conquer",
+                                    "desc":  "Binary search, Merge sort, Quick sort. Strassen\u0027s multiplication."
+                                },
+                                {
+                                    "title":  "Module III: Greedy Techniques",
+                                    "desc":  "Knapsack, Kruskal\u0027s, Prim\u0027s algorithms, Dijkstra\u0027s algorithm."
+                                },
+                                {
+                                    "title":  "Module IV: Dynamic Programming",
+                                    "desc":  "Fibonacci, 0/1 Knapsack, Floyd-Warshall path algorithms."
+                                }
+                            ]
+            },
+    "ai":  {
+               "id":  "ai",
+               "title":  "Artificial Intelligence",
+               "sem":  "sem4",
+               "semLabel":  "Semester IV",
+               "icon":  "fa-solid fa-microchip",
+               "desc":  "Intelligent agents, uninformed and informed search, logic, and basics of machine learning (Python mapped).",
+               "videos": [
+                   {
+                       "title": "Artificial Intelligence (Complete Playlist)",
+                       "provider": "Gate Smashers",
+                       "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiHGhOHV-nwb0HR5US5GFKFI"
+                   },
+                   {
+                       "title": "Artificial Intelligence for Semester Exams",
+                       "provider": "KnowledgeGATE Bytes",
+                       "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PL1yi97NuDUSi4wxOWDhFU-71qChMfjrkl"
+                   }
+               ],
+               "notesName":  "Javatpoint AI Reference Notes",
+               "notesLink":  "https://www.javatpoint.com/artificial-intelligence-tutorial",
+               "mockLink":  "https://www.sanfoundry.com/artificial-intelligence-mcqs/",
+               "modules":  [
+                               {
+                                   "title":  "Module I: Intro \u0026 Intelligent Agents",
+                                   "desc":  "AI concepts, rationality, agent architecture."
+                               },
+                               {
+                                   "title":  "Module II: Search Algorithms",
+                                   "desc":  "BFS, DFS, A* Search. Minimax \u0026 Alpha-Beta pruning."
+                               },
+                               {
+                                   "title":  "Module III: Knowledge Representation",
+                                   "desc":  "Propositional logic, predicate logic, Fuzzy logic sets."
+                               },
+                               {
+                                   "title":  "Module IV: Emerging tech \u0026 ML",
+                                   "desc":  "Robotics, Computer vision, Neural network fundamentals."
+                               }
+                           ]
+           },
+    "dccn":  {
+                 "id":  "dccn",
+                 "title":  "Computer Networks",
+                 "sem":  "sem3",
+                 "semLabel":  "Semester III",
+                 "icon":  "fa-solid fa-network-wired",
+                 "desc":  "Understanding how the internet works, TCP/IP vs OSI model, top-to-bottom transmission architecture.",
+                 "videos": [
+                     {
+                         "title": "Computer Networks (Complete Playlist)",
+                         "provider": "Gate Smashers",
+                         "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_"
+                     },
+                     {
+                         "title": "Computer Networks (Complete Playlist)",
+                         "provider": "Knowledge Gate - Sanchit Sir",
+                         "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLmXKhU9FNesSjFbXSZGF8JF_4LVwwofCd"
+                     },
+                     {
+                         "title": "Computer Networks",
+                         "provider": "Neso Academy",
+                         "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx"
+                     }
+                 ],
+                 "notesName":  "GFG CN Hub \u0026 Standard Textbook links",
+                 "notesLink":  "https://www.geeksforgeeks.org/computer-network-tutorials/",
+                 "mockLink":  "https://www.indiabix.com/computer-science/networking/",
+                 "modules":  [
+                                 {
+                                     "title":  "Module I: Networks \u0026 Topologies",
+                                     "desc":  "Bus, Star, Ring configurations. Basic standardizations."
+                                 },
+                                 {
+                                     "title":  "Module II: Transmission Media",
+                                     "desc":  "Cables, Fiber optics, digital and analog transition logic."
+                                 },
+                                 {
+                                     "title":  "Module III: Switching Models",
+                                     "desc":  "Packet switching, circuit switching, message protocols."
+                                 },
+                                 {
+                                     "title":  "Module IV: Reference Models \u0026 Routing",
+                                     "desc":  "OSI Layers breakdown. Basic IP architecture."
+                                 }
+                             ]
+             },
+    "se":  {
+               "id":  "se",
+               "title":  "Software Engineering",
+               "sem":  "sem3",
+               "semLabel":  "Semester III",
+               "icon":  "fa-solid fa-code-commit",
+               "desc":  "Complete guide to software development lifecycles (SDLC), requirement gathering, diagramming, and QA testing.",
+               "videos": [
+                   {
+                       "title": "Software Engineering",
+                       "provider": "Gate Smashers",
+                       "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiEed7SKZBnC6ypFDWYLRvB2"
+                   },
+                   {
+                       "title": "Software Engineering",
+                       "provider": "Knowledge Gate",
+                       "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLmXKhU9FNesTrw7n8ouPsSLEcduRlENHr"
+                   }
+               ],
+               "notesName":  "Software Eng. Full Guides (Pressman Reference)",
+               "notesLink":  "https://www.tutorialspoint.com/software_engineering/index.htm",
+               "mockLink":  "https://www.sanfoundry.com/software-engineering-mcqs/",
+               "modules":  [
+                               {
+                                   "title":  "Module I: SDLC Models",
+                                   "desc":  "Waterfall, Agile, Spiral. Evolving nature of code."
+                               },
+                               {
+                                   "title":  "Module II: Requirements Analysis",
+                                   "desc":  "Functional requirements, preparing standard SRS documents."
+                               },
+                               {
+                                   "title":  "Module III: Designing architectures",
+                                   "desc":  "Class diagrams, sequence models, mapping components."
+                               },
+                               {
+                                   "title":  "Module IV: Testing Paradigms",
+                                   "desc":  "Black box, white box testing, bug fixing logic."
+                               }
+                           ]
+           },
+    "cg":  {
+               "id":  "cg",
+               "title":  "Computer Graphics",
+               "sem":  "sem3",
+               "semLabel":  "Semester III",
+               "icon":  "fa-solid fa-palette",
+               "desc":  "Mathematical basis of drawing on screens. CRT, raster scanning, Bresenham line algorithms, scaling \u0026 translations.",
+               "videos": [
+                   {
+                       "title": "Computer Graphics (Complete Playlist)",
+                       "provider": "Gate Smashers",
+                       "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiH2neELedJ9eXc8iR49oNVV"
+                   },
+                   {
+                       "title": "Computer Graphics (Full Course)",
+                       "provider": "5 Minutes Engineering",
+                       "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLYwpaL_SFmcAtxMe7ahYC4ZYjQHun_b-T"
+                   }
+               ],
+               "notesName":  "Standard Algorithm Implementations",
+               "notesLink":  "https://www.javatpoint.com/computer-graphics-tutorial",
+               "mockLink":  "https://www.indiabix.com/computer-science/computer-graphics/",
+               "modules":  [
+                               {
+                                   "title":  "Module I: Visual Systems",
+                                   "desc":  "Pixels, CRT, LCD displays architecture."
+                               },
+                               {
+                                   "title":  "Module II: Line \u0026 Curve algorithms",
+                                   "desc":  "DDA, Bresenham Line and circle formulas."
+                               },
+                               {
+                                   "title":  "Module III: 2D \u0026 3D Geometry Transform",
+                                   "desc":  "Matrix transformations (Scale, rotate, translate)."
+                               }
+                           ]
+           },
+    "ot":  {
+               "id":  "ot",
+               "title":  "Optimization Technique",
+               "sem":  "sem3",
+               "semLabel":  "Semester III",
+               "icon":  "fa-solid fa-chart-line",
+               "desc":  "Operations research mathematically finding the best scheduling, planning, or mapping outcomes (LPP \u0026 Transportation).",
+               "videos": [
+                   {
+                       "title": "Operation Research",
+                       "provider": "Dr. Gajendra Purohit",
+                       "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLU6SqdYcYsfLyEPjMPHT_1ZhTRrnXA55R"
+                   },
+                   {
+                       "title": "Linear Programming Problem",
+                       "provider": "Dr. Gajendra Purohit",
+                       "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLU6SqdYcYsfLewoQPYjgg7SMBLjSV704v"
+                   }
+               ],
+               "notesName":  "Simplex \u0026 LPP Study Guide",
+               "notesLink":  "https://www.geeksforgeeks.org/linear-programming/",
+               "mockLink":  "https://www.sanfoundry.com/operations-research-mcqs/",
+               "modules":  [
+                               {
+                                   "title":  "Module I: LPP Graph Methods",
+                                   "desc":  "Creating LPP bounds, shading intersection spaces."
+                               },
+                               {
+                                   "title":  "Module II: The Simplex Algorithm",
+                                   "desc":  "Handling multiple constraints via pivoting arrays."
+                               },
+                               {
+                                   "title":  "Module III: Transport Optimizing",
+                                   "desc":  "Vogel\u0027s cost technique, northwest corner routing methods."
+                               }
+                           ]
+           }
+}
