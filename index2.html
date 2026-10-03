@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA 2nd Year | Learning Hub</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index2.css">
+    <script src="index2.js" defer></script>
+
+    
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap"></i> BCA 2nd Year
+        </div>
+        <div class="nav-links">
+            <button class="nav-btn active" type="button" data-action="dashboard"><i class="fa-solid fa-house"></i> Dashboard</button>
+            <h4 class="sidebar-section-label">Semesters</h4>
+            <button class="nav-btn" type="button" data-semester="sem3"><i class="fa-regular fa-folder"></i> Semester III</button>
+            <button class="nav-btn" type="button" data-semester="sem4"><i class="fa-regular fa-folder-open"></i> Semester IV</button>
+            <button class="nav-btn" type="button" data-action="about"><i class="fa-regular fa-user"></i> About Himanshu</button>
+        </div>
+        <div class="sidebar-footer">
+            Designed & Curated by<br>
+            <strong>Himanshu Pratap Singh</strong><br>
+            <span class="sidebar-footer-subtitle">BCA 2nd Year Student</span>
+        </div>
+    </nav>
+
+    <!-- MAIN PLATFORM -->
+    <main class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false" data-action="toggle-sidebar"><i class="fa-solid fa-bars"></i></button>
+            <div class="topbar-spacer" aria-hidden="true"></div>
+            <div class="topbar-right">
+                <a href="https://chat.whatsapp.com/Kqt79EZb62B4BjBB2NvySq" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp community-icon" aria-hidden="true"></i> <span>Join Community</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Scrolling Content Area -->
+        <div class="content-scroll" id="mainScroll">
+            
+            <!-- 1. DASHBOARD VIEW -->
+            <p class="app-error" id="app-error" role="alert" hidden></p>
+
+            <div class="container" id="dashboard-view">
+                <div class="page-header">
+                    <h1 id="dashboard-title">All Subjects</h1>
+                    <p class="dashboard-description">Click on any subject to access roadmaps, track progress, and watch embedded video lectures.</p>
+                </div>
+                
+                <div class="subject-grid" id="subject-grid">
+                    <!-- Injected by JavaScript -->
+                </div>
+            </div>
+
+            <!-- About the student who created this learning hub -->
+            <section class="container about-view" id="about-view" aria-labelledby="about-title">
+                <button class="back-link" type="button" data-action="dashboard">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Dashboard
+                </button>
+
+                <div class="about-hero">
+                    <p class="about-eyebrow">A student-led project for our college</p>
+                    <h1 id="about-title">Hi, I'm Himanshu Thakur.</h1>
+                    <p class="about-intro">I'm a BCA second-year student, and I created this learning hub to make it easier for students in my college to find course roadmaps, track syllabus progress, and access useful learning resources in one place.</p>
+                </div>
+
+                <div class="about-grid">
+                    <article class="about-card project-card">
+                        <div class="about-card-icon" aria-hidden="true">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <p class="about-eyebrow">Why I built it</p>
+                        <h2>Made for students, shaped by student needs.</h2>
+                        <p>This is an independent student project to help classmates study at their own pace. It brings semester subjects, module checklists, curated video playlists, notes, and practice links together so it is easier to know what to study next.</p>
+                        <p>The goal is simple: make helpful resources easier to discover and keep learning a little more organized.</p>
+                    </article>
+
+                    <aside class="about-card instagram-profile-card" aria-labelledby="instagram-profile-title">
+                        <div class="about-social-heading">
+                            <div>
+                                <p class="about-eyebrow">From my Instagram</p>
+                                <h2 id="instagram-profile-title">Follow along</h2>
+                            </div>
+                            <i class="fa-brands fa-instagram instagram-brand-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="instagram-profile-embed">
+                            <iframe
+                                src="https://www.instagram.com/himanshuthaakur/embed/"
+                                title="Himanshu Thakur's Instagram profile"
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <a class="instagram-profile-link" href="https://www.instagram.com/himanshuthaakur?stkn=cnI2d3hxYmw4Z3l2" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            Visit @himanshuthaakur
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </aside>
+                </div>
+
+                <section class="about-socials" aria-labelledby="social-links-title">
+                    <p class="about-eyebrow">Say hello and stay connected</p>
+                    <h2 id="social-links-title">Find me online</h2>
+                    <div class="social-links-grid">
+                        <a class="social-link linkedin-link" href="https://www.linkedin.com/in/himaanshuedits?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            <span><strong>LinkedIn</strong><small>Connect professionally</small></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square social-link-arrow" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link reddit-link" href="https://www.reddit.com/u/Cloutixdigital/s/btqG2Epfrk" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-reddit-alien" aria-hidden="true"></i>
+                            <span><strong>Reddit</strong><small>Find me as Cloutixdigital</small></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square social-link-arrow" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link instagram-link" href="https://www.instagram.com/himanshuthaakur?stkn=cnI2d3hxYmw4Z3l2" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            <span><strong>Instagram</strong><small>Follow @himanshuthaakur</small></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square social-link-arrow" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link community-link" href="https://chat.whatsapp.com/Kqt79EZb62B4BjBB2NvySq" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            <span><strong>Student community</strong><small>Join the WhatsApp group</small></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square social-link-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+            </section>
+
+            <!-- 2. COURSE DETAIL VIEW -->
+            <div class="container" id="course-view">
+                <button class="back-link" type="button" data-action="dashboard">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+                </button>
+
+                <div class="page-header">
+                    <h1 id="course-title">Course Name</h1>
+                    <p id="course-desc">Course description goes here.</p>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-btn active" type="button" data-tab="tab-roadmap">Syllabus Tracker</button>
+                    <button class="tab-btn" type="button" data-tab="tab-videos">Embedded Lectures</button>
+                    <button class="tab-btn" type="button" data-tab="tab-resources">Resources & Tests</button>
+                </div>
+
+                <!-- Tab: Syllabus Tracker -->
+                <div id="tab-roadmap" class="tab-content active">
+                    <div class="module-list" id="module-list-container">
+                        <!-- Checkboxes injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Tab: Embedded Video Player -->
+                <div id="tab-videos" class="tab-content">
+                    <div class="video-container">
+                        <h3 class="section-heading video-heading" id="video-provider-name">Course playlists</h3>
+                        <div class="playlist-options" id="playlist-options" aria-label="Choose a video playlist"></div>
+                        <div class="video-player-wrapper" id="video-embed-wrapper">
+                            <!-- Iframe injected by JS -->
+                        </div>
+                        <a class="video-source-link" id="video-source-link" href="#" target="_blank" rel="noopener noreferrer">
+                            Open this playlist on YouTube
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tab: External Resources -->
+                <div id="tab-resources" class="tab-content">
+                    <h3 class="section-heading">Recommended Study Materials</h3>
+                    <div class="links-grid">
+                        <a href="#" id="book-link" target="_blank" rel="noopener noreferrer" class="ext-link">
+                            <i class="fa-solid fa-book-open-reader"></i> 
+                            <span id="book-title">Best Notes Link</span>
+                        </a>
+                        <a href="#" id="mock-link" target="_blank" rel="noopener noreferrer" class="ext-link">
+                            <i class="fa-solid fa-clipboard-check"></i> 
+                            <span>Take Topic Mock Test</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <aside class="instagram-popup" id="instagram-popup" aria-label="Follow Himanshu on Instagram" hidden>
+        <button class="instagram-popup-close" id="instagram-popup-close" type="button" aria-label="Dismiss Instagram follow prompt">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="instagram-popup-icon" aria-hidden="true">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="instagram-popup-content">
+            <p class="instagram-popup-eyebrow">Stay connected</p>
+            <p class="instagram-popup-message">Enjoying the learning hub? Follow Himanshu Thakur on Instagram.</p>
+            <a class="instagram-popup-link" href="https://www.instagram.com/himanshuthaakur?stkn=cnI2d3hxYmw4Z3l2" target="_blank" rel="noopener noreferrer">
+                Follow on Instagram
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+        </div>
+    </aside>
+</body>
+</html>

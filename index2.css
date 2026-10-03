@@ -1,0 +1,789 @@
+﻿/* =========================================
+           EMERALD PLATFORM DESIGN SYSTEM
+           ========================================= */
+        :root {
+            --sidebar-bg: #064e3b; /* Deep Forest Green */
+            --sidebar-hover: #047857;
+            --main-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --text-light: #f8fafc;
+            
+            --accent: #10b981; /* Emerald */
+            --accent-glow: rgba(16, 185, 129, 0.2);
+            --border: #e2e8f0;
+            --success: #059669;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: var(--main-bg);
+            color: var(--text-main);
+            overflow: hidden; /* Prevents whole-page scroll, only parts scroll */
+        }
+
+        /* =========================================
+           SIDEBAR NAVIGATION
+           ========================================= */
+        .sidebar {
+            width: 280px;
+            background: var(--sidebar-bg);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            box-shadow: 4px 0 15px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-header {
+            padding: 30px 24px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-links {
+            padding: 24px 12px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .nav-btn {
+            width: 100%;
+            text-align: left;
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            padding: 14px 20px;
+            font-size: 1rem;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: 0.2s;
+            font-weight: 500;
+            opacity: 0.85;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--sidebar-hover);
+            opacity: 1;
+        }
+
+        .sidebar-footer {
+            padding: 24px;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            line-height: 1.5;
+            color: #d1fae5;
+        }
+
+        .sidebar-section-label {
+            margin: 24px 0 8px 12px;
+            font-size: 0.8rem;
+            color: #a7f3d0;
+            opacity: 0.7;
+            text-transform: uppercase;
+        }
+
+        .sidebar-footer-subtitle {
+            opacity: 0.7;
+        }
+
+        /* =========================================
+           MAIN CONTENT AREA
+           ========================================= */
+        .main-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .topbar {
+            background: var(--card-bg);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .topbar-right {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .topbar-spacer {
+            flex: 1;
+        }
+
+        .community-icon {
+            font-size: 1.2rem;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20b858;
+            transform: translateY(-2px);
+        }
+
+        .content-scroll {
+            flex: 1;
+            overflow-y: auto;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* =========================================
+           GRID (DASHBOARD)
+           ========================================= */
+        .page-header {
+            margin-bottom: 32px;
+        }
+        .page-header h1 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .dashboard-description {
+            color: var(--text-muted);
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            position: relative;
+            width: 100%;
+            text-align: left;
+            font: inherit;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px var(--accent-glow);
+        }
+
+        .card-icon {
+            height: 60px;
+            width: 60px;
+            background: var(--accent-glow);
+            color: var(--success);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .card-description {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: #f1f5f9;
+            color: var(--text-muted);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+        }
+
+        /* =========================================
+           COURSE DETAIL VIEW (TABS & CHECKLIST)
+           ========================================= */
+        #course-view { display: none; }
+        #about-view { display: none; }
+        
+        .back-link {
+            background: none;
+            border: 0;
+            color: var(--accent);
+            font: inherit;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            margin-bottom: 24px;
+        }
+
+        .back-link:hover {
+            color: var(--success);
+        }
+
+        .about-view {
+            padding-bottom: 32px;
+        }
+
+        .about-hero {
+            margin-bottom: 32px;
+            padding: clamp(28px, 5vw, 56px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--card-bg), var(--accent-glow));
+        }
+
+        .about-eyebrow {
+            margin-bottom: 10px;
+            color: var(--success);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .about-hero h1 {
+            margin-bottom: 14px;
+            color: var(--text-main);
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        .about-intro {
+            max-width: 760px;
+            color: var(--text-muted);
+            font-size: 1.08rem;
+            line-height: 1.7;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+            gap: 24px;
+            align-items: start;
+        }
+
+        .about-card {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: var(--card-bg);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+        }
+
+        .about-card h2,
+        .about-socials h2 {
+            margin-bottom: 14px;
+            color: var(--text-main);
+            font-size: 1.45rem;
+        }
+
+        .about-card > p:not(.about-eyebrow) {
+            margin-top: 14px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .about-card-icon {
+            display: grid;
+            width: 52px;
+            height: 52px;
+            margin-bottom: 22px;
+            place-items: center;
+            border-radius: 14px;
+            background: var(--accent-glow);
+            color: var(--success);
+            font-size: 1.4rem;
+        }
+
+        .about-social-heading {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .about-social-heading .about-eyebrow {
+            margin-bottom: 6px;
+        }
+
+        .instagram-brand-icon {
+            color: #c13584;
+            font-size: 1.5rem;
+        }
+
+        .instagram-profile-embed {
+            height: 480px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--main-bg);
+        }
+
+        .instagram-profile-embed iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .instagram-profile-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-top: 18px;
+            color: #c13584;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .instagram-profile-link:hover {
+            text-decoration: underline;
+        }
+
+        .about-socials {
+            margin-top: 38px;
+        }
+
+        .social-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            min-width: 0;
+            align-items: center;
+            gap: 14px;
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .social-link > i:first-child {
+            width: 28px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .social-link span {
+            display: grid;
+            flex: 1;
+            gap: 4px;
+        }
+
+        .social-link small {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .social-link-arrow {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .linkedin-link > i:first-child { color: #0a66c2; }
+        .reddit-link > i:first-child { color: #ff4500; }
+        .instagram-link > i:first-child { color: #c13584; }
+        .community-link > i:first-child { color: #25d366; }
+
+        .tabs {
+            display: flex;
+            gap: 16px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 32px;
+            overflow-x: auto;
+        }
+        
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .tab-btn.active {
+            color: var(--success);
+            border-color: var(--success);
+        }
+
+        .tab-content { display: none; animation: fadeIn 0.4s; }
+        .tab-content.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* PROGRESS CHECKLIST */
+        .module-list {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 32px;
+        }
+        .module-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .module-item:last-child { border-bottom: none; }
+        
+        .checkbox-wrapper input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            accent-color: var(--success);
+            cursor: pointer;
+            margin-top: 4px;
+        }
+
+        .module-text h4 {
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+        .module-text p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .module-item.completed .module-text h4 {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        /* YOUTUBE EMBED PLAYER */
+        .video-container {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 24px;
+        }
+
+        .section-heading {
+            margin-bottom: 20px;
+        }
+
+        .video-heading {
+            font-size: 1.2rem;
+        }
+
+        .playlist-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .playlist-option {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--main-bg);
+            color: var(--text-main);
+            font: inherit;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .playlist-option:hover,
+        .playlist-option.active {
+            border-color: var(--success);
+            background: var(--accent-glow);
+        }
+
+        .playlist-option-provider {
+            display: block;
+            margin-top: 3px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .video-player-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .video-player-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-source-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        /* EXTERNAL LINKS LIST */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .ext-link {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .ext-link i { color: var(--accent); font-size: 1.4rem; }
+        .ext-link:hover { border-color: var(--accent); background: #f0fdf4; }
+
+        .app-error {
+            max-width: 1200px;
+            margin: 0 auto 24px;
+            padding: 16px 20px;
+            border: 1px solid #dc2626;
+            border-radius: 12px;
+            background: #fef2f2;
+            color: #991b1b;
+            line-height: 1.5;
+        }
+
+        .instagram-popup {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 1100;
+            display: grid;
+            grid-template-columns: 44px minmax(0, 1fr);
+            gap: 14px;
+            width: min(360px, calc(100vw - 32px));
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-left: 4px solid #c13584;
+            border-radius: 16px;
+            background: var(--card-bg);
+            color: var(--text-main);
+            box-shadow: 0 12px 36px rgba(15, 23, 42, 0.16);
+            animation: instagram-popup-enter 0.3s ease-out;
+        }
+
+        .instagram-popup[hidden] {
+            display: none;
+        }
+
+        .instagram-popup-close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            display: grid;
+            width: 30px;
+            height: 30px;
+            place-items: center;
+            border: 0;
+            border-radius: 50%;
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        .instagram-popup-close:hover {
+            background: var(--main-bg);
+            color: var(--text-main);
+        }
+
+        .instagram-popup-icon {
+            display: grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border-radius: 13px;
+            background: linear-gradient(135deg, #feda75, #fa7e1e 35%, #d62976 65%, #962fbf);
+            color: #fff;
+            font-size: 1.4rem;
+        }
+
+        .instagram-popup-content {
+            padding-right: 14px;
+        }
+
+        .instagram-popup-eyebrow {
+            margin-bottom: 5px;
+            color: #c13584;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .instagram-popup-message {
+            margin-bottom: 12px;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+
+        .instagram-popup-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #c13584;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .instagram-popup-link:hover {
+            color: #962fbf;
+            text-decoration: underline;
+        }
+
+        @keyframes instagram-popup-enter {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .instagram-popup {
+                animation: none;
+            }
+        }
+
+        /* =========================================
+           MOBILE RESPONSIVENESS
+           ========================================= */
+        @media (max-width: 900px) {
+            .sidebar {
+                position: fixed;
+                left: -300px;
+                height: 100vh;
+                height: 100dvh;
+                overflow-y: auto;
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+            .sidebar.show {
+                left: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+            .content-scroll {
+                padding: 20px 20px 120px;
+            }
+            .sidebar-header,
+            .sidebar-footer {
+                flex-shrink: 0;
+            }
+            .nav-links {
+                min-height: 0;
+            }
+            .sidebar-footer {
+                padding-bottom: calc(24px + env(safe-area-inset-bottom));
+                margin-bottom: 16px;
+            }
+            .whatsapp-btn span { display: none; }
+            .instagram-popup {
+                right: 16px;
+                bottom: 16px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-card {
+                padding: 20px;
+            }
+            .instagram-profile-embed {
+                height: 430px;
+            }
+        }
