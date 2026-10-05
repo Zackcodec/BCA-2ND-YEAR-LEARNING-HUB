@@ -2,8 +2,7 @@
     "python":  {
                    "id":  "python",
                    "title":  "Python Programming",
-                   "sem":  "sem4",
-                   "semLabel":  "Semester IV",
+                   "year": "year2",
                    "icon":  "fa-brands fa-python",
                    "desc":  "Master Python from scratch: data types, control flow, functions, dictionaries, and file handling. Highly requested in industry.",
                    "videos":  [
@@ -43,8 +42,7 @@
     "dbms":  {
                  "id":  "dbms",
                  "title":  "DBMS Using PL/SQL",
-                 "sem":  "sem4",
-                 "semLabel":  "Semester IV",
+                 "year": "year2",
                  "icon":  "fa-solid fa-database",
                  "desc":  "Understand architecture, ER modelling, Normalization, Relational Algebra and practically apply SQL operations.",
                  "videos":  [
@@ -93,8 +91,7 @@
     "daa":  {
                 "id":  "daa",
                 "title":  "Design \u0026 Analysis of Algorithms",
-                "sem":  "sem4",
-                "semLabel":  "Semester IV",
+                "year": "year2",
                 "icon":  "fa-solid fa-diagram-project",
                 "desc":  "Core CS fundamentals: Time complexities, Divide \u0026 Conquer, Greedy strategies, and Dynamic programming approaches.",
                 "videos": [
@@ -134,8 +131,7 @@
     "ai":  {
                "id":  "ai",
                "title":  "Artificial Intelligence",
-               "sem":  "sem4",
-               "semLabel":  "Semester IV",
+               "year": "year2",
                "icon":  "fa-solid fa-microchip",
                "desc":  "Intelligent agents, uninformed and informed search, logic, and basics of machine learning (Python mapped).",
                "videos": [
@@ -145,7 +141,7 @@
                        "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiHGhOHV-nwb0HR5US5GFKFI"
                    },
                    {
-                       "title": "Artificial Intelligence for Semester Exams",
+                       "title": "Artificial Intelligence",
                        "provider": "KnowledgeGATE Bytes",
                        "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PL1yi97NuDUSi4wxOWDhFU-71qChMfjrkl"
                    }
@@ -175,8 +171,7 @@
     "dccn":  {
                  "id":  "dccn",
                  "title":  "Computer Networks",
-                 "sem":  "sem3",
-                 "semLabel":  "Semester III",
+                 "year": "year2",
                  "icon":  "fa-solid fa-network-wired",
                  "desc":  "Understanding how the internet works, TCP/IP vs OSI model, top-to-bottom transmission architecture.",
                  "videos": [
@@ -221,8 +216,7 @@
     "se":  {
                "id":  "se",
                "title":  "Software Engineering",
-               "sem":  "sem3",
-               "semLabel":  "Semester III",
+               "year": "year2",
                "icon":  "fa-solid fa-code-commit",
                "desc":  "Complete guide to software development lifecycles (SDLC), requirement gathering, diagramming, and QA testing.",
                "videos": [
@@ -262,8 +256,7 @@
     "cg":  {
                "id":  "cg",
                "title":  "Computer Graphics",
-               "sem":  "sem3",
-               "semLabel":  "Semester III",
+               "year": "year2",
                "icon":  "fa-solid fa-palette",
                "desc":  "Mathematical basis of drawing on screens. CRT, raster scanning, Bresenham line algorithms, scaling \u0026 translations.",
                "videos": [
@@ -299,8 +292,7 @@
     "ot":  {
                "id":  "ot",
                "title":  "Optimization Technique",
-               "sem":  "sem3",
-               "semLabel":  "Semester III",
+               "year": "year2",
                "icon":  "fa-solid fa-chart-line",
                "desc":  "Operations research mathematically finding the best scheduling, planning, or mapping outcomes (LPP \u0026 Transportation).",
                "videos": [
@@ -332,5 +324,399 @@
                                    "desc":  "Vogel\u0027s cost technique, northwest corner routing methods."
                                }
                            ]
-           }
+           },
+    "c_programming": {
+        "id": "c_programming",
+        "title": "Programming in C",
+        "year": "year1",
+        "icon": "fa-solid fa-code",
+        "desc": "A beginner roadmap through C syntax, control flow, functions, arrays, pointers, structures, and file handling. Generic outline; confirm topics with your university syllabus.",
+        "videos": [
+            {
+                "title": "C Programming for Beginners",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxgZQoSe9cg1drBnejUaDD9GEJBGQ5hMt"
+            }
+        ],
+        "notesName": "Learn-C interactive C tutorial",
+        "notesLink": "https://learn-c.org/",
+        "mockName": "C practice exercises",
+        "mockLink": "https://learn-c.org/",
+        "modules": [
+            { "title": "Module I: C Basics and Data Types", "desc": "Program structure, compiling, variables, constants, operators, formatted input/output, and type conversion." },
+            { "title": "Module II: Decisions, Loops, and Functions", "desc": "Conditional statements, iteration, function prototypes, arguments, return values, scope, and recursion." },
+            { "title": "Module III: Arrays, Strings, and Pointers", "desc": "One- and two-dimensional arrays, string handling, pointer arithmetic, and the relationship between arrays and pointers." },
+            { "title": "Module IV: Structures and Files", "desc": "Structures, unions, enumerations, dynamic memory basics, and text-file input/output." }
+        ]
+    },
+    "computer_fundamentals": {
+        "id": "computer_fundamentals",
+        "title": "Computer Fundamentals",
+        "year": "year1",
+        "icon": "fa-solid fa-computer",
+        "desc": "An introduction to computer systems, data representation, operating systems, networks, and safe digital practices. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Computer Fundamentals playlist search",
+                "provider": "YouTube",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLdRvo17OxWQisoSb1XmXvn_pmIrrIs9Cx"
+            }
+        ],
+        "notesName": "Cisco Networking Academy: Computer Hardware Basics",
+        "notesLink": "https://www.netacad.com/courses/computer-hardware-basics",
+        "mockName": "Cisco course activities",
+        "mockLink": "https://www.netacad.com/courses/computer-hardware-basics",
+        "modules": [
+            { "title": "Module I: Computer Systems and Hardware", "desc": "Computer generations and types, CPU components, input/output devices, ports, and peripheral devices." },
+            { "title": "Module II: Data Representation and Memory", "desc": "Binary, decimal, and hexadecimal numbers; character coding; units of storage; primary and secondary memory." },
+            { "title": "Module III: Software and Operating Systems", "desc": "System and application software, operating-system responsibilities, files, folders, and common utilities." },
+            { "title": "Module IV: Networks, Internet, and Digital Safety", "desc": "Network basics, web services, cloud storage, passwords, privacy, malware awareness, and safe browsing." }
+        ]
+    },
+    "mathematics_i": {
+        "id": "mathematics_i",
+        "title": "Mathematics for Computing I",
+        "year": "year1",
+        "icon": "fa-solid fa-square-root-variable",
+        "desc": "A computing-oriented mathematics roadmap covering logic, sets, relations, counting, and probability. Generic discrete-mathematics outline; confirm the actual topics with your university.",
+        "videos": [
+            {
+                "title": "Discrete Mathematics for Computer Science playlist search",
+                "provider": "YouTube",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLBlnK6fEyqRjZU477sHY1rUFlNZO0_Q9x"
+            }
+        ],
+        "notesName": "MIT Mathematics for Computer Science",
+        "notesLink": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/",
+        "mockName": "MIT problem sets",
+        "mockLink": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/",
+        "modules": [
+            { "title": "Module I: Propositional Logic and Proofs", "desc": "Statements, logical connectives, truth tables, implications, predicates, and introductory proof techniques." },
+            { "title": "Module II: Sets, Relations, and Functions", "desc": "Set operations, Cartesian products, relation properties, equivalence relations, partial orders, and function types." },
+            { "title": "Module III: Counting and Combinatorics", "desc": "Sum and product rules, permutations, combinations, binomial coefficients, and the pigeonhole principle." },
+            { "title": "Module IV: Probability and Discrete Structures", "desc": "Basic probability, conditional probability, simple recurrences, graphs, and trees where included by the syllabus." }
+        ]
+    },
+    "communication_skills": {
+        "id": "communication_skills",
+        "title": "Communication Skills",
+        "year": "year1",
+        "icon": "fa-solid fa-comments",
+        "desc": "Practice clear academic and professional communication through writing, presentations, listening, and teamwork. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Communication Mastery Series",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLv9O1ieIsEgfbNVwPqWxlZq_JtKmnsubv"
+            }
+        ],
+        "notesName": "Purdue OWL writing resources",
+        "notesLink": "https://owl.purdue.edu/owl/general_writing/index.html",
+        "mockName": "Purdue OWL writing exercises",
+        "mockLink": "https://owl.purdue.edu/owl_exercises/index.html",
+        "modules": [
+            { "title": "Module I: Grammar and Clear Expression", "desc": "Sentence structure, parts of speech, common errors, vocabulary, tone, and concise paragraph writing." },
+            { "title": "Module II: Academic and Professional Writing", "desc": "Emails, applications, reports, summaries, proofreading, audience, and purpose." },
+            { "title": "Module III: Listening, Speaking, and Presentations", "desc": "Active listening, group discussion, public speaking, presentation structure, and visual aids." },
+            { "title": "Module IV: Technical Communication and Teamwork", "desc": "Explaining technical ideas, meeting etiquette, collaboration, interview basics, and constructive feedback." }
+        ]
+    },
+    "data_structures": {
+        "id": "data_structures",
+        "title": "Data Structures",
+        "year": "year1",
+        "icon": "fa-solid fa-diagram-project",
+        "desc": "A practical progression from complexity and linear structures to trees, graphs, hashing, and sorting. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Complete C++ Data Structures and Algorithms",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt"
+            }
+        ],
+        "notesName": "OpenDSA open textbooks and visualizations",
+        "notesLink": "https://opendsa-server.cs.vt.edu/home/books",
+        "mockName": "OpenDSA interactive exercises",
+        "mockLink": "https://opendsa-server.cs.vt.edu/home/books",
+        "modules": [
+            { "title": "Module I: Algorithm Analysis and Arrays", "desc": "Abstract data types, time and space complexity, asymptotic notation, arrays, and searching." },
+            { "title": "Module II: Linked Lists, Stacks, and Queues", "desc": "Singly and doubly linked lists, stack operations and applications, queues, and circular queues." },
+            { "title": "Module III: Trees and Heaps", "desc": "Tree terminology, binary trees, traversals, binary search trees, balanced-tree concepts, and heaps." },
+            { "title": "Module IV: Graphs, Hashing, and Sorting", "desc": "Graph representations and traversals, hash tables, collision handling, and common sorting algorithms." }
+        ]
+    },
+    "cpp": {
+        "id": "cpp",
+        "title": "Object-Oriented Programming with C++",
+        "year": "year1",
+        "icon": "fa-solid fa-code",
+        "desc": "Learn C++ fundamentals and object-oriented programming, then apply classes, inheritance, templates, and the standard library. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "C++ Tutorials in Hindi",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL"
+            },
+            {
+                "title": "C++ Tutorial for Beginners - Full Course",
+                "provider": "freeCodeCamp.org",
+                "playlistUrl": "https://www.youtube.com/embed/vLnPwxZdW4Y"
+            }
+        ],
+        "notesName": "LearnCpp.com tutorial",
+        "notesLink": "https://www.learncpp.com/",
+        "mockName": "Exercism C++ practice exercises",
+        "mockLink": "https://exercism.org/tracks/cpp",
+        "modules": [
+            { "title": "Module I: C++ Basics and Control Flow", "desc": "Program structure, types, operators, input/output, conditions, loops, and basic functions." },
+            { "title": "Module II: Functions, Classes, and Objects", "desc": "Function overloading, constructors, access control, encapsulation, and object lifetime." },
+            { "title": "Module III: Inheritance and Polymorphism", "desc": "Inheritance, overriding, virtual functions, abstract classes, and composition." },
+            { "title": "Module IV: Templates, Exceptions, and STL", "desc": "Exception handling, function and class templates, strings, containers, iterators, and algorithms." }
+        ]
+    },
+    "digital_logic": {
+        "id": "digital_logic",
+        "title": "Digital Logic and Computer Organization",
+        "year": "year1",
+        "icon": "fa-solid fa-microchip",
+        "desc": "A foundation in number systems, Boolean logic, digital circuits, and sequential components. Generic outline; confirm the required depth with your university syllabus.",
+        "videos": [
+            {
+                "title": "Digital Logic - Complete Playlist",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiGmXg4NoX6R31AsC5LeCPHe"
+            }
+        ],
+        "notesName": "Nand2Tetris open materials",
+        "notesLink": "https://www.nand2tetris.org/",
+        "mockName": "Nand2Tetris project exercises",
+        "mockLink": "https://www.nand2tetris.org/",
+        "modules": [
+            { "title": "Module I: Number Systems and Codes", "desc": "Binary, octal, decimal, and hexadecimal conversion; signed numbers; complements; and common codes." },
+            { "title": "Module II: Boolean Algebra and Logic Gates", "desc": "Boolean laws, truth tables, logic gates, canonical forms, and simplification using Karnaugh maps." },
+            { "title": "Module III: Combinational Circuits", "desc": "Adders, subtractors, multiplexers, decoders, encoders, and basic circuit design." },
+            { "title": "Module IV: Sequential Logic and Memory", "desc": "Latches, flip-flops, registers, counters, finite-state concepts, and introductory memory organization." }
+        ]
+    },
+    "accounting": {
+        "id": "accounting",
+        "title": "Financial Accounting",
+        "year": "year1",
+        "icon": "fa-solid fa-calculator",
+        "desc": "An introductory accounting sequence from transactions and ledgers to financial statements and analysis. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Financial Accounting and Analysis",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLaAhQ2ofZZRCJIUbTjeUXx4JoZ7CyGHr3"
+            }
+        ],
+        "notesName": "OpenStax Principles of Financial Accounting",
+        "notesLink": "https://openstax.org/details/books/principles-financial-accounting",
+        "mockName": "OpenStax chapter exercises",
+        "mockLink": "https://openstax.org/details/books/principles-financial-accounting",
+        "modules": [
+            { "title": "Module I: Accounting Concepts and the Equation", "desc": "Purpose of accounting, users, principles, the accounting equation, and recording business transactions." },
+            { "title": "Module II: Journals, Ledgers, and Trial Balance", "desc": "Double-entry rules, journalizing, posting to ledger accounts, and preparing a trial balance." },
+            { "title": "Module III: Adjustments and Financial Statements", "desc": "Accruals, deferrals, depreciation basics, adjusting entries, and preparation of core statements." },
+            { "title": "Module IV: Cash Flow and Financial Analysis", "desc": "Cash-flow statement concepts, liquidity and profitability ratios, and introductory statement analysis." }
+        ]
+    },
+    "java": {
+        "id": "java",
+        "title": "Java Programming",
+        "year": "year3",
+        "icon": "fa-brands fa-java",
+        "desc": "A Java roadmap covering programming fundamentals, object-oriented design, collections, exceptions, and small applications. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Java Tutorials for Beginners in Hindi",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q"
+            },
+            {
+                "title": "Java Full Course for Beginners",
+                "provider": "Programming with Mosh",
+                "playlistUrl": "https://www.youtube.com/embed/eIrMbAQSU34"
+            }
+        ],
+        "notesName": "University of Helsinki Java MOOC",
+        "notesLink": "https://java-programming.mooc.fi/",
+        "mockName": "Java MOOC programming exercises",
+        "mockLink": "https://java-programming.mooc.fi/",
+        "modules": [
+            { "title": "Module I: Java Syntax and Control Flow", "desc": "JDK and JVM basics, variables, types, operators, input/output, conditions, loops, and methods." },
+            { "title": "Module II: Classes and Object-Oriented Design", "desc": "Classes, objects, constructors, encapsulation, inheritance, interfaces, and polymorphism." },
+            { "title": "Module III: Exceptions and Collections", "desc": "Exception handling, generic types, lists, sets, maps, iteration, and collection use cases." },
+            { "title": "Module IV: Files, Testing, and Applications", "desc": "File input/output, packages, basic unit testing, debugging, and building a small console application." }
+        ]
+    },
+    "web_technology": {
+        "id": "web_technology",
+        "title": "Web Technologies",
+        "year": "year3",
+        "icon": "fa-solid fa-globe",
+        "desc": "Build a web foundation with semantic HTML, CSS, JavaScript, browser APIs, and accessible responsive pages. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "HTML, CSS, JavaScript, Projects, and Git",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLfqMhTWNBTe0PY9xunOzsP5kmYIz2Hu7i"
+            }
+        ],
+        "notesName": "MDN Learn Web Development",
+        "notesLink": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+        "mockName": "freeCodeCamp interactive curriculum",
+        "mockLink": "https://www.freecodecamp.org/learn/",
+        "modules": [
+            { "title": "Module I: HTML and Semantic Structure", "desc": "Document structure, semantic elements, links, lists, tables, forms, and accessible labels." },
+            { "title": "Module II: CSS and Responsive Design", "desc": "Selectors, box model, typography, Flexbox, Grid, media queries, and responsive layouts." },
+            { "title": "Module III: JavaScript and the DOM", "desc": "Variables, functions, arrays, events, DOM selection and updates, validation, and browser debugging." },
+            { "title": "Module IV: Web Applications and Accessibility", "desc": "HTTP basics, client/server roles, form handling, accessibility checks, and deploying a static site." }
+        ]
+    },
+    "computer_architecture": {
+        "id": "computer_architecture",
+        "title": "Computer Architecture",
+        "year": "year3",
+        "icon": "fa-solid fa-microchip",
+        "desc": "Study how instructions execute, how a processor is organized, and how memory and I/O systems affect performance. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Computer Organization and Architecture",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiHMonh3G6QNKq53C6oNXGrX"
+            }
+        ],
+        "notesName": "Nand2Tetris open computer architecture materials",
+        "notesLink": "https://www.nand2tetris.org/",
+        "mockName": "Nand2Tetris computer-building projects",
+        "mockLink": "https://www.nand2tetris.org/",
+        "modules": [
+            { "title": "Module I: Data Representation and Instruction Sets", "desc": "Integer and floating-point representation, machine instructions, addressing modes, and assembly-language concepts." },
+            { "title": "Module II: Processor Datapath and Control", "desc": "Register transfers, ALU operations, instruction cycles, datapath components, and control-unit organization." },
+            { "title": "Module III: Pipelining and Performance", "desc": "Instruction pipelines, hazards, interrupts, performance metrics, and introductory parallelism." },
+            { "title": "Module IV: Memory Hierarchy and I/O", "desc": "Cache principles, main and secondary memory, buses, I/O techniques, and storage systems." }
+        ]
+    },
+    "software_testing": {
+        "id": "software_testing",
+        "title": "Software Testing and Quality Assurance",
+        "year": "year3",
+        "icon": "fa-solid fa-vial",
+        "desc": "A practical software quality roadmap spanning test design, levels, automation, defects, and release readiness. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Manual Software Testing - Full Course",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLUDwpEzHYYLseflPNg0bUKfLmAbO2JnE9"
+            }
+        ],
+        "notesName": "ISTQB CTFL v4.0 syllabus and materials",
+        "notesLink": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/",
+        "mockName": "Official ISTQB sample exam",
+        "mockLink": "https://istqb.org/?sdm_process_download=1&download_id=3352",
+        "modules": [
+            { "title": "Module I: Testing Fundamentals and Lifecycle", "desc": "Testing objectives, principles, verification and validation, test levels, and the software development lifecycle." },
+            { "title": "Module II: Test Design Techniques", "desc": "Equivalence partitioning, boundary values, decision tables, state transitions, and experience-based testing." },
+            { "title": "Module III: Test Execution and Automation", "desc": "Test planning, test cases, manual execution, regression, automation concepts, and test reporting." },
+            { "title": "Module IV: Defects and Quality Assurance", "desc": "Defect lifecycle, severity and priority, root-cause analysis, reviews, metrics, and release criteria." }
+        ]
+    },
+    "cloud_computing": {
+        "id": "cloud_computing",
+        "title": "Cloud Computing",
+        "year": "year3",
+        "icon": "fa-solid fa-cloud",
+        "desc": "An introduction to cloud service models, architecture, storage, deployment, security, and cost awareness. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Cloud Computing - Complete Course",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiHRHVUtR-O52MsrdUSrzuy4"
+            }
+        ],
+        "notesName": "Microsoft Learn: Describe cloud concepts",
+        "notesLink": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+        "mockName": "Microsoft Learn knowledge checks",
+        "mockLink": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+        "modules": [
+            { "title": "Module I: Cloud Concepts and Service Models", "desc": "Cloud characteristics, public/private/hybrid deployments, IaaS, PaaS, SaaS, and virtualization." },
+            { "title": "Module II: Cloud Architecture and Storage", "desc": "Regions and availability zones, compute and networking basics, object storage, databases, and scalability." },
+            { "title": "Module III: Containers and Serverless", "desc": "Containers, orchestration concepts, event-driven computing, serverless functions, and deployment workflows." },
+            { "title": "Module IV: Cloud Security, Cost, and Monitoring", "desc": "Identity and access, shared responsibility, backup, monitoring, reliability, and introductory cost management." }
+        ]
+    },
+    "cyber_security": {
+        "id": "cyber_security",
+        "title": "Cyber Security",
+        "year": "year3",
+        "icon": "fa-solid fa-shield-halved",
+        "desc": "Learn security principles, common threats, defensive controls, and responsible security practice. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Cyber Security Training for Beginners",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PL9ooVrP1hQOGPQVeapGsJCktzIO4DtI4_"
+            }
+        ],
+        "notesName": "OWASP Web Security Testing Guide",
+        "notesLink": "https://owasp.org/www-project-web-security-testing-guide/",
+        "mockName": "picoCTF practice challenges",
+        "mockLink": "https://picoctf.org/",
+        "modules": [
+            { "title": "Module I: Security Principles and Threats", "desc": "Confidentiality, integrity, availability, assets, threat modelling, social engineering, and common malware." },
+            { "title": "Module II: Network and Web Security", "desc": "Network attack surfaces, secure communication, authentication risks, web vulnerabilities, and OWASP concepts." },
+            { "title": "Module III: Cryptography and Defensive Controls", "desc": "Encryption and hashing concepts, access control, firewalls, secure configuration, and backups." },
+            { "title": "Module IV: Ethical Testing and Incident Response", "desc": "Authorization and scope, responsible disclosure, basic incident handling, evidence care, and recovery." }
+        ]
+    },
+    "data_mining": {
+        "id": "data_mining",
+        "title": "Data Mining",
+        "year": "year3",
+        "icon": "fa-solid fa-magnifying-glass-chart",
+        "desc": "Explore data preparation, classification, clustering, association analysis, and evaluation. Generic outline; confirm with your university syllabus.",
+        "videos": [
+            {
+                "title": "Data Warehouse and Data Mining",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLxCzCOWd7aiHexyDzYgry0YZN29e7HdNB"
+            }
+        ],
+        "notesName": "Weka documentation and learning resources",
+        "notesLink": "https://waikato.github.io/weka-wiki/",
+        "mockName": "UCI Machine Learning Repository practice datasets",
+        "mockLink": "https://archive.ics.uci.edu/",
+        "modules": [
+            { "title": "Module I: Data Preparation and Exploration", "desc": "Data types, cleaning, integration, transformation, feature selection, and exploratory analysis." },
+            { "title": "Module II: Classification and Prediction", "desc": "Training and test sets, decision trees, classification basics, prediction, and overfitting." },
+            { "title": "Module III: Clustering and Association", "desc": "Similarity measures, k-means concepts, hierarchical clustering, frequent itemsets, and association rules." },
+            { "title": "Module IV: Evaluation and Visualization", "desc": "Confusion matrices, precision and recall, validation, interpreting patterns, and communicating results." }
+        ]
+    },
+    "project_work": {
+        "id": "project_work",
+        "title": "Major Project",
+        "year": "year3",
+        "icon": "fa-solid fa-list-check",
+        "desc": "A milestone-based guide for planning, building, testing, documenting, and presenting a BCA capstone. Adapt it to your department's project rubric.",
+        "videos": [
+            {
+                "title": "Software Engineering and Project Management",
+                "provider": "YouTube playlist",
+                "playlistUrl": "https://www.youtube.com/embed/videoseries?list=PLYwpaL_SFmcCB7zUM0YSDR-1mM4KoiyLM"
+            }
+        ],
+        "notesName": "CS50 final project guidance",
+        "notesLink": "https://cs50.harvard.edu/x/2025/project/",
+        "mockName": "GitHub Skills practical workflow lessons",
+        "mockLink": "https://github.com/skills",
+        "modules": [
+            { "title": "Module I: Problem Selection and Requirements", "desc": "Define a real problem, identify users, assess feasibility, gather requirements, and write measurable objectives." },
+            { "title": "Module II: System Design and Planning", "desc": "Plan milestones, model workflows and data, design the interface, choose tools, and track risks." },
+            { "title": "Module III: Implementation and Testing", "desc": "Build in small increments, use version control, test core flows, fix defects, and review accessibility and security." },
+            { "title": "Module IV: Deployment, Report, and Viva", "desc": "Deploy a working release, write setup and user documentation, prepare a demonstration, and explain design decisions." }
+        ]
+    }
 }
